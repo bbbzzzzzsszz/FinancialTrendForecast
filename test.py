@@ -159,7 +159,6 @@ def test(csv_file, model_save_path, test_time):
     print("Test sample nums: ", len(test_all))
     print('Rise nums: ', sum(label_all))
 
-    # delete_col = [22,53,40,16,14,17,43,25,8, 58, 28,24,42,4,55,32,54] 
     delete_col = [46, 59, 24,28,61,4,32]
     test_X = np.array(test_all).reshape(len(test_all), -1)
     test_X = np.delete(test_X, delete_col, axis=1)
@@ -176,7 +175,7 @@ def test(csv_file, model_save_path, test_time):
 if __name__ == "__main__":
     csv_file = "data/data2012.csv"
     model_save_path = "model/model.pkl"
-    test_time = "Q2"    # Q1  or  Q2  or Q3   or Q4
+    test_time = "Q1"    # Q1  or  Q2  or Q3   or Q4
     test(csv_file, model_save_path, test_time)
 
     
